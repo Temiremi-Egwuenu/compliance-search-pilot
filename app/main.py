@@ -8,3 +8,6 @@ def health_check():
         "status": "ok",
         "message": "Compliance Search Pilot is running"
     }
+@app.get("/search")
+def search(q: str):
+    return {"query": q}
